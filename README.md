@@ -1,6 +1,12 @@
 # Sort GNOME Shell Apps!
 This simple shell script makes the GNOME Shell Apps Dashboard sort the apps into their respective categories based on the [FreeDesktop standard](https://standards.freedesktop.org/menu-spec/latest/apa.html).
 
+## Results
+A nicely sorted Apps Dashboard!
+
+![Screenshot](http://i.imgur.com/2o2yIib.png)
+_App icons are property of their respective owners._
+
 ## How to use?
 
 *You may want to back up your dConf before doing this, just in case something goes wrong.*
@@ -10,12 +16,6 @@ This simple shell script makes the GNOME Shell Apps Dashboard sort the apps into
 3. Run `appfixer.sh` from a terminal.
 4. Restart GNOME Shell by pressing `ALT+F2` and running the command `r`. Alternatively, you could restart your machine or log out/in to achieve this.
 5. Enjoy!
-
-## Results
-A nicely sorted Apps Dashboard!
-
-![Screenshot](http://i.imgur.com/2o2yIib.png)
-_App icons are property of their respective owners._
 
 ## FAQ
 
