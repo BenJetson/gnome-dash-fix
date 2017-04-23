@@ -7,6 +7,7 @@
 # Lincensed under the MIT License.
 # Copyright (c) 2017 Ben Godfrey
 
+
 gsettings set org.gnome.desktop.app-folders folder-children "['accessories', 'chrome-apps', 'games', 'graphics', 'internet', 'office', 'programming', 'science', 'sound---video', 'system-tools', 'universal-access']"
 
 
