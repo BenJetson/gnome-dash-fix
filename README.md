@@ -25,6 +25,8 @@ I have used this on GNOME Shell v3.22 and GNOME Shell v3.24 successfully. The sc
 #### A category is missing!
 I only implemented the most commonly used categories. To add new categories, see below about fixing unsorted apps.
 
+You could also modify this shell script to add additional categories. For information about the categories, see [FreeDesktop.org's reference page](https://standards.freedesktop.org/menu-spec/latest/apa.html). For information about how to configure categories using `gsettings`, see [the GNOME Wiki](https://wiki.gnome.org/HowDoI/AppFolders).
+
 #### How do I remove a category?
 To remove a category, see below about fixing unsorted apps. GNOME Software allows you to both create and delete categories.
 
