@@ -1,5 +1,5 @@
 # Makes the GNOME Shell Apps Dashboard sort the apps into their
-#   respective categories based on the OpenDesktop standard.
+#   respective categories based on the FreeDesktop standard.
 
 # By using this shell script, you hereby take full responsiblity
 #   for anything that happens to your system.
