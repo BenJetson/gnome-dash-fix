@@ -20,7 +20,7 @@ _App icons are property of their respective owners._
 ## FAQ
 
 #### Which versions of GNOME Shell does this work on?
-I have used this on GNOME Shell v3.22 and GNOME Shell v3.24 successfully. There's a good chance the script will still work, but as always, be sure to back up your dConf before using scripts like this that modify the system configuration.
+I have used this on GNOME Shell v3.22 and GNOME Shell v3.24 successfully. The script should work on other shell versions, but every system varies. As always, be sure to back up your dConf before using scripts (like this) that modify the system configuration.
 
 #### A category is missing!
 I only implemented the most commonly used categories. To add new categories, see below about fixing unsorted apps.
