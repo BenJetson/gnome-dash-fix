@@ -25,5 +25,8 @@ I have used this on GNOME Shell v3.22 and GNOME Shell v3.24 successfully. There'
 #### A category is missing!
 I only implemented the most commonly used categories. To add new categories, see below about fixing unsorted apps.
 
+#### How do I remove a category?
+To remove a category, see below about fixing unsorted apps. GNOME Software allows you to both create and delete categories.
+
 #### How to fix unsorted apps?
 After applying the fix, some apps may not be sorted into categories. There's a good chance the app developer didn't include the categories in their `.desktop` file. This can be corrected by manually adding the app to the appropriate folder using GNOME Software. For more information, see [this post on the GNOME Blog](https://blogs.gnome.org/mclasen/2014/03/17/app-folder-configuration/).
