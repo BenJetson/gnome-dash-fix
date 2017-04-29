@@ -1,6 +1,17 @@
 import os
 import sys
 
+if sys.version_info < (3,0):
+    print("""ERROR: Python 3 is required to run this script.
+
+Is python3 installed? Try running the script
+as 'python3 interactive.py' instead.
+
+If this doesn't work, you may need to install
+the Python 3 interpreter from GNOME Software.
+
+Exiting.""")
+    sys.exit(1)
 
 class Folder:
     def __init__(self, name, categories):
