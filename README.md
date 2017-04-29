@@ -15,9 +15,11 @@ _App icons are property of their respective owners._
 
 1. Clone or download the repository from GitHub.
 2. Open a terminal and `cd` to the directory containing the files.
-3. Run `python3 interactive.py` to start the interactive program.
+3. Flag `interactive.py` as executable: `chmod +x interactive.py`
+4. Run the script: `./interactive.py`
 4. Follow the instructions on-screen and make selections using the keyboard.
 5. Enjoy!
+
 
 #### Using the old shell script
 
