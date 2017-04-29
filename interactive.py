@@ -67,6 +67,8 @@ def doReset():
 
 
 def resetAll():
+    os.system("clear")
+    for i in range(2): print()
     print("""WARNING! This will erase ALL folders you have
     in your apps dashboard and return all apps
     to an unsorted state. 
