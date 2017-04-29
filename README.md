@@ -21,11 +21,11 @@ _App icons are property of their respective owners._
 5. Enjoy!
 
 
-#### Using the old shell script
+#### Using the legacy shell script
 
 1. Clone or download this repository from GitHub.
-2. Flag `appfixer.sh` as executable.
-3. Run `appfixer.sh` from a terminal.
+2. Flag `appfixer.sh` as executable: `chmod +x ./appfixer.sh`
+3. Run `./appfixer.sh` from a terminal.
 4. Restart GNOME Shell by pressing `ALT+F2` and running the command `r`. Alternatively, you could restart your machine or log out/in to achieve this.
 5. Enjoy!
 
