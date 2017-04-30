@@ -19,12 +19,19 @@ class Folder:
     def __init__(self, name, categories):
         self.title = name
         self.name = "".join(i for i in name.lower() if i.isalnum())
-        self.categories = ""
+        self.categories = categories
+        self.categoryString = ""
 
         for cat in categories:
-            self.categories += "'{}', ".format(cat)
+            self.categoryString += "'{}', ".format(cat)
 
-        self.categories = "[" + self.categories[:-2] + "]"
+        self.categoryString = "[" + self.categoryString[:-2] + "]"
+
+    def writeToDisk(self):
+        os.system(("gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders" +
+                  "/folders/{}/ name \"{}\"".format(self.name, self.title)))
+        os.system(("gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders" +
+                  "/folders/{}/ categories \"{}\"".format(self.name, self.categoryString)))
 
 DEFAULTS = [Folder("Accessories", ['Utility']),
             Folder("Chrome Apps", ['chrome-apps']),
@@ -98,23 +105,22 @@ def resetAll():
         sys.exit()
 
 
-def writeSettings(inputArray):
-    masterList = ""
+def mkCatString(folders):
+    catString = ""
 
-    for item in inputArray:
-        masterList += "'{}', ".format(item.name)
+    for item in folders:
+        catString += "'{}', ".format(item.name)
 
-    masterList = "[" + masterList[:-2] + "]"
+    catString = catString = "[" + catString[:-2] + "]"
 
-    os.system("gsettings set org.gnome.desktop.app-folders folder-children \"{}\"".format(masterList))
+    return "gsettings set org.gnome.desktop.app-folders folder-children \"{}\"".format(catString)
 
-    for item in inputArray:
-        os.system(
-            "gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/{}/ name \"{}\"".format(
-                item.name, item.title))
-        os.system(
-            "gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/{}/ categories \"{}\"".format(
-                item.name, item.categories))
+def writeSettings(folders):
+
+    os.system(mkCatString(folders))
+
+    for item in folders:
+        item.writeToDisk()
 
 
 def setSorted():
@@ -146,7 +152,7 @@ def listCats(cats):
     for i in range(len(cats)):
         print()
         print("{}. TITLE:      {}".format(i + 1, cats[i].title))
-        print("    CATEGORIES: {}".format(cats[i].categories[1:-1]))
+        print("    CATEGORIES: {}".format(cats[i].categoryString[1:-1]))
 
 def editMenu():
     while True:
