@@ -26,6 +26,18 @@ class Folder:
 
         self.categories = "[" + self.categories[:-2] + "]"
 
+DEFAULTS = [Folder("Accessories", ['Utility']),
+            Folder("Chrome Apps", ['chrome-apps']),
+            Folder("Games", ['Game']),
+            Folder("Graphics", ['Graphics']),
+            Folder("Internet", ['Network', 'WebBrowser', 'Email']),
+            Folder("Office", ['Office']),
+            Folder("Programming", ['Development']),
+            Folder("Science", ['Science']),
+            Folder("Sound & Video", ['AudioVideo', 'Audio', 'Video']),
+            Folder("System Tools", ['System', 'Settings']),
+            Folder("Universal Access", ['Accessibility']),
+            Folder("Wine", ['Wine', 'Wine-Programs-Accessories'])]
 
 def ynQuery(question):
     while True:
@@ -119,18 +131,7 @@ def setSorted():
     if ynQuery("Are you sure you wish to do this?"):
         print()
         doReset()
-        writeSettings([Folder("Accessories", ['Utility']),
-                       Folder("Chrome Apps", ['chrome-apps']),
-                       Folder("Games", ['Game']),
-                       Folder("Graphics", ['Graphics']),
-                       Folder("Internet", ['Network', 'WebBrowser', 'Email']),
-                       Folder("Office", ['Office']),
-                       Folder("Programming", ['Development']),
-                       Folder("Science", ['Science']),
-                       Folder("Sound & Video", ['AudioVideo', 'Audio', 'Video']),
-                       Folder("System Tools", ['System', 'Settings']),
-                       Folder("Universal Access", ['Accessibility']),
-                       Folder("Wine", ['Wine', 'Wine-Programs-Accessories'])])
+        writeSettings(DEFAULTS)
         os.system("clear")
         for i in range(2): print()
         print("Your apps dashboard is now sorted by the predefined categories.")
@@ -218,18 +219,7 @@ def customBuild():
 
     os.system("clear")
 
-    userFolders = [Folder("Accessories", ['Utility']),
-                   Folder("Chrome Apps", ['chrome-apps']),
-                   Folder("Games", ['Game']),
-                   Folder("Graphics", ['Graphics']),
-                   Folder("Internet", ['Network', 'WebBrowser', 'Email']),
-                   Folder("Office", ['Office']),
-                   Folder("Programming", ['Development']),
-                   Folder("Science", ['Science']),
-                   Folder("Sound & Video", ['AudioVideo', 'Audio', 'Video']),
-                   Folder("System Tools", ['System', 'Settings']),
-                   Folder("Universal Access", ['Accessibility']),
-                   Folder("Wine", ['Wine', 'Wine-Programs-Accessories'])]
+    userFolders = DEFAULTS
 
     for i in range(2): print()
     print("The default folders are preloaded and will be listed for you.")
