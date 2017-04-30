@@ -44,7 +44,7 @@ DEFAULTS = [Folder("Accessories", ['Utility']),
             Folder("Sound & Video", ['AudioVideo', 'Audio', 'Video']),
             Folder("System Tools", ['System', 'Settings']),
             Folder("Universal Access", ['Accessibility']),
-            Folder("Wine", ['Wine', 'Wine-Programs-Accessories'])]
+            Folder("Wine", ['Wine', 'X-Wine', 'Wine-Programs-Accessories'])]
 
 def ynQuery(question):
     while True:
